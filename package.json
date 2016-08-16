@@ -1,6 +1,6 @@
 {
   "name": "three-orthographic-trackball-controls",
-  "version": "79.0.0",
+  "version": "79.0.1",
   "description": "THREE.OrthographicTrackballControls as an npm package",
   "main": "index.js",
   "scripts": {
