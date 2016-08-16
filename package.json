@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Whoaa512/three-orthographic-trackball-controls.git"
   },
+  "peerDependencies": {
+    "three": ">=0.79.0"
+  },
   "keywords": [
     "three",
     "threejs",
