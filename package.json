@@ -1,0 +1,27 @@
+{
+  "name": "three-orthographic-trackball-controls",
+  "version": "79.0.0",
+  "description": "THREE.OrthographicTrackballControls as an npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Whoaa512/three-orthographic-trackball-controls.git"
+  },
+  "keywords": [
+    "three",
+    "threejs",
+    "OrthographicTrackballControls",
+    "orthographic",
+    "trackball",
+    "controls"
+  ],
+  "author": "C.J. Winslow <whoaa512@gmail.com> (https://github.com/whoaa512)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Whoaa512/three-orthographic-trackball-controls/issues"
+  },
+  "homepage": "https://github.com/Whoaa512/three-orthographic-trackball-controls#readme"
+}
