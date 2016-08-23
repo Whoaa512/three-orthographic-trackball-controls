@@ -614,7 +614,7 @@ THREE.OrthographicTrackballControls = function ( object, domElement ) {
 
     }
 
-    this.dispose = function() {
+    this.disableEvents = function() {
 
         this.domElement.removeEventListener( 'contextmenu', contextmenu, false );
         this.domElement.removeEventListener( 'mousedown', mousedown, false );
@@ -632,19 +632,25 @@ THREE.OrthographicTrackballControls = function ( object, domElement ) {
         window.removeEventListener( 'keyup', keyup, false );
 
     }
+    this.dispose = this.disableEvents
 
+    this.enableEvents = function() {
+        this.domElement.addEventListener( 'contextmenu', contextmenu, false );
+        this.domElement.addEventListener( 'mousedown', mousedown, false );
+        this.domElement.addEventListener( 'mousewheel', mousewheel, false );
+        this.domElement.addEventListener( 'MozMousePixelScroll', mousewheel, false ); // firefox
 
-    this.domElement.addEventListener( 'contextmenu', contextmenu, false );
-    this.domElement.addEventListener( 'mousedown', mousedown, false );
-    this.domElement.addEventListener( 'mousewheel', mousewheel, false );
-    this.domElement.addEventListener( 'MozMousePixelScroll', mousewheel, false ); // firefox
+        this.domElement.addEventListener( 'touchstart', touchstart, false );
+        this.domElement.addEventListener( 'touchend', touchend, false );
+        this.domElement.addEventListener( 'touchmove', touchmove, false );
 
-    this.domElement.addEventListener( 'touchstart', touchstart, false );
-    this.domElement.addEventListener( 'touchend', touchend, false );
-    this.domElement.addEventListener( 'touchmove', touchmove, false );
+        window.addEventListener( 'keydown', keydown, false );
+        window.addEventListener( 'keyup', keyup, false );
 
-    window.addEventListener( 'keydown', keydown, false );
-    window.addEventListener( 'keyup', keyup, false );
+    }
+
+    // Enable events at start
+    this.enableEvents()
 
     this.handleResize();
 
